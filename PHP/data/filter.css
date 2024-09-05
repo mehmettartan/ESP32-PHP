@@ -1,0 +1,269 @@
+@import url("https://fonts.googleapis.com/css2?family=Electrolize&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: white;
+  background-size: 400% 400%;
+  animation: animate 15s ease infinite;
+}
+
+@keyframes animate {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.container {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  color: #fff;
+  text-align: center;
+}
+
+.container h1 {
+  margin-bottom: 20px;
+  font-size: 2.5em;
+  font-weight: 700;
+}
+
+.form-group {
+  margin-bottom: 15px;
+  color: black;
+}
+
+label {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+input[type="number"],
+input[type="date"] {
+  width: 100%;
+  padding: 10px;
+  margin-top: 15px;
+  border-radius: 5px;
+  border: 1px solid black;
+  font-size: 1em;
+}
+
+.filter-btn {
+  padding: 10px 90px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #e50914;
+  color: #ffffff;
+  transition: background-color 0.3s;
+  margin-top: 20px;
+}
+
+.filter-btn:hover {
+  background-color: #c40812;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+
+table th, table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+table th {
+  background-color: #007bff;
+  color: white;
+}
+
+tbody tr {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+tbody tr:nth-child(even) {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+tbody td {
+  padding: 10px;
+  color: black;
+  font-size: 1.5em;
+  background-color: darkseagreen;
+}
+/* Navbar*/
+.navbar {
+  background-color: white;
+  height: 60px;
+  color: #ffffff;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.navbar-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  padding: 0 20px;
+}
+
+.navbar-link {
+  margin-right: 15px;
+  transition: color 0.3s, text-decoration 0.3s;
+}
+
+.navbar-link:hover {
+  color: #e50914;
+  text-decoration: underline;
+}
+
+.logo-wrapper {
+  flex-grow: 1; 
+}
+
+.logo {
+  width: 150px;
+}
+
+.menu-container {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.menu-list {
+  display: flex;
+  list-style: none;
+  column-gap: 30px;
+  padding: 0;
+}
+
+.menu-list-item {
+  cursor: pointer;
+  transition: font-weight 0.3s;
+}
+
+.menu-list-item a {
+  text-decoration: none;
+  color: black;
+  transition: color 0.3s;
+}
+
+.menu-list-item a:hover {
+  color: #E50914;
+  font-weight: bold;
+}
+
+.profile-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-grow: 1;
+}
+
+.profile-text-container a {
+  position: relative;
+  right: 50px;
+  font-size: 16px;
+  font-weight: 500;
+  color: black;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.profile-text-container a:hover {
+  color: #E50914;
+  font-weight: bold;
+  text-decoration: none;
+}
+/*Content*/
+.content-wrapper {
+  margin-left: 60px;
+  padding: 20px;
+}
+
+.featured-content {
+  padding: 50px;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #ffffff;
+}
+
+.featured-content h1 {
+  color: red;
+  position: relative;
+  top: -30px;
+}
+
+.featured-title {
+  font-size: 48px;
+  margin-bottom: 20px;
+  max-width: 40%;
+}
+
+.featured-desc {
+  width: 500px;
+  background-color: rgba(229, 9, 20, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.featured-buttons button {
+  padding: 10px 25px;
+  border-radius: 2px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #e50914;
+  color: #ffffff;
+  transition: background-color 0.3s;
+}
+
+.featured-buttons button:hover {
+  background-color: #c40812;
+}
+
+.footer {
+  margin-top: auto;
+  background-color: #f1f1f1;
+  padding: 10px;
+  text-align: center;
+  width: 100%;
+  border-top: 1px solid #ddd;
+}
+
+.footer p {
+  margin: 5px 0;
+}
